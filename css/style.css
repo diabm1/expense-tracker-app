@@ -34,6 +34,10 @@ th {
     padding: 10px;
 }
 
+td {
+    padding: 5px;
+}
+
 #innerTable {
     border-collapse: collapse;
 }
@@ -62,6 +66,6 @@ th {
     color: red;
 }
 
-#inputForAmount::before{
+#inputForAmount::before {
     content: "\0024";
 }

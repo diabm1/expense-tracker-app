@@ -48,7 +48,7 @@ tbl.style.marginRight = "auto"
 //submit button
 submitBtn.addEventListener("click", function () {
     if (
-      date.value === null ||
+      date.value === "" ||
       expenseDescription.value === "" ||
       amount.value === null ||
       purchaseLocation.value === ""
