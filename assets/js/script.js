@@ -41,21 +41,21 @@ tbl.appendChild(tblBody);
 document.body.appendChild(tbl);
 
 tbl.setAttribute("border", "2");
-tbl.style.marginLeft = "auto"
-tbl.style.marginRight = "auto"
+tbl.style.marginLeft = "auto";
+tbl.style.marginRight = "auto";
 // tbl.setAttribute("align", "center");
 
 //submit button
 submitBtn.addEventListener("click", function () {
-    if (
-      date.value === "" ||
-      expenseDescription.value === "" ||
-      amount.value === null ||
-      purchaseLocation.value === ""
-    ) {
-      alert("Please Fill All Required Field");
-      return false;
-    }
+  if (
+    date.value === "" ||
+    expenseDescription.value === "" ||
+    amount.value === null ||
+    purchaseLocation.value === ""
+  ) {
+    alert("Please Fill All Required Field");
+    return false;
+  }
 
   // const innerTd = document.createElement("td")
   // innerTd.id = "coumns"
@@ -74,7 +74,6 @@ submitBtn.addEventListener("click", function () {
   // const innerTable = document.getElementById("innerTable")
   // innerTable.appendChild(tBody)
 
-  //How do I keep adding columns underneath each other maybe I need to add an id to a tr tag? Imma continue in html file
   //   const firstColumn = document.getElementById("firstColumn");
   //   firstColumn.innerHTML = `<p>${date.value}</p>`;
   //   firstColumn.style.display = "block"
@@ -102,29 +101,6 @@ submitBtn.addEventListener("click", function () {
   //   const fifthColumn = document.getElementById("fifthColumn");
   //   fifthColumn.appendChild(delBtn);
 
-  //delete button
-  //   let btnClicked = false;
-  //   console.log(btnClicked);
-  //   delBtn.addEventListener("click", function () {
-  //     btnClicked = true;
-  //     // console.log(btnClicked);
-  //     if (btnClicked === false) {
-  //       //display everything
-  //       firstColumn.style.display = "inline";
-  //       secondColumn.style.display = "inline";
-  //       thirdColumn.style.display = "inline";
-  //       fourthColumn.style.display = "inline";
-  //       fifthColumn.style.display = "inline";
-  //     } else if (btnClicked === true) {
-  //       //display nothing
-  //       firstColumn.style.display = "none";
-  //       secondColumn.style.display = "none";
-  //       thirdColumn.style.display = "none";
-  //       fourthColumn.style.display = "none";
-  //       fifthColumn.style.display = "none";
-  //     }
-  //   });
-
   // clears input field
 
   // function generateTable() {
@@ -136,6 +112,7 @@ submitBtn.addEventListener("click", function () {
   // for (let i = 0; i < 2; i++) {
   // creates a table row
   const row1 = document.createElement("tr");
+  row1.id = "row1"
 
   //   for (let j = 0; j < 2; j++) {
   // Create a <td> element and a text node, make the text
@@ -146,18 +123,48 @@ submitBtn.addEventListener("click", function () {
   const cell1 = document.createElement("td");
   const cell2 = document.createElement("td");
   const cell3 = document.createElement("td");
+  const cell4 = document.createElement("td");
   const cellText = document.createTextNode(`${date.value}`);
   const cellText1 = document.createTextNode(`${expenseDescription.value}`);
   const cellText2 = document.createTextNode(`$ ${amount.value}`);
   const cellText3 = document.createTextNode(`${purchaseLocation.value}`);
+
   cell.appendChild(cellText);
   cell1.appendChild(cellText1);
   cell2.appendChild(cellText2);
   cell3.appendChild(cellText3);
+  cell4.appendChild(delBtn);
+
   row1.appendChild(cell);
   row1.appendChild(cell1);
   row1.appendChild(cell2);
   row1.appendChild(cell3);
+  row1.appendChild(cell4);
+
+  //delete button
+  let btnClicked = false;
+  console.log(btnClicked);
+  delBtn.addEventListener("click", function () {
+    btnClicked = true;
+    // console.log(btnClicked);
+    if (btnClicked === false) {
+      //display everything
+      // firstColumn.style.display = "inline";
+      // secondColumn.style.display = "inline";
+      // thirdColumn.style.display = "inline";
+      // fourthColumn.style.display = "inline";
+      // fifthColumn.style.display = "inline";
+      row1.style.display = "inline"
+    } else if (btnClicked === true) {
+      //display nothing
+      // firstColumn.style.display = "none";
+      // secondColumn.style.display = "none";
+      // thirdColumn.style.display = "none";
+      // fourthColumn.style.display = "none";
+      // fifthColumn.style.display = "none";
+      row1.style.display = "none"
+    }
+  });
 
   //   }
 
