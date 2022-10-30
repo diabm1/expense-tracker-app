@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>expense tracker</title>
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="title">Expense Tracker</h1>
+    </div>
+    <div id="inputForExpenses">
+        <h1 id="subtitle">Input Expenses Here:</h1>
+        <br>
+        <br>
+        <!-- Four inputs one for date of expense, a description of the expense, the amount, where the purchases occured (e.g. walmart)-->
+        <!-- Text input with label on the left -->
+        <table id="tableForInputs">
+            <tbody>
+                <!-- First Row -->
+                <tr>
+                    <td>
+                        <form>
+                            <label for="inputForDateOfExpense">Date: </label>
+                            <input type="date" id="inputForDateOfExpense" name="date">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <label for="inputForDescriptionOfExpense">Expense Description: </label>
+                            <input type="text" id="inputForDescriptionOfExpense" name="expenseDescription">
+                        </form>
+                    </td>
+                </tr>
+                <!-- Second Row -->
+                <tr>
+                    <td>
+                        <form>
+                            <label for="inputForAmount">Amount: </label>
+                            <input type="number" id="inputForAmount" name="amount">
+                        </form>
+                    </td>
+                    <td>
+                        <form>
+                            <label for="inputForLocationOfPurchases">Location of Purchase: </label>
+                            <input type="text" id="inputForLocationOfPurchases" name="purchaseLocation">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Submit" id="submitBtn" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div>
+        <!-- <table id="tableResults">
+            <tbody id="tableBody">
+                <tr>
+                    <td>
+                        <table id="innerTable"> -->
+                            <!-- Table Headers -->
+                            <!-- <tr>
+                                <th>Date:</th>
+                                <th>Expense Description:</th>
+                                <th>Amount: </th>
+                                <th>Location of Purchase: </th>
+                            </tr> -->
+                            <!-- Maybe, I need to dynamically render this whole row underneath to somehow be like... a loop? do I even need a loop if I only need a new row to be generated everytime I click the submit button
+                            
+                            My logic needs to look something like this
+                            Once Submit is clicked generate new row with all of the td's, input values
+                        -->
+                            <!-- <tr> -->
+                                    <!-- Dynamically Render these items below -->
+                                    <!-- Date: -->
+                                    <!-- <td id="firstColumn"></td> -->
+                                    <!-- Expense Description: -->
+                                    <!-- <td id="secondColumn"></td> -->
+                                    <!-- Amount: -->
+                                    <!-- <td id="thirdColumn"></td> -->
+                                    <!-- Location of Purchase: -->
+                                    <!-- <td id="fourthColumn"></td> -->
+                                    <!-- Delete Button -->
+                                    <!-- <td id="fifthColumn"></td> -->
+                                    <!-- I need to dynamically generate a p tag inside each td for each column/category -->
+                            <!-- </tr> -->
+
+                        <!-- </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
