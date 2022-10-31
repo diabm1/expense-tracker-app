@@ -33,7 +33,6 @@ row.appendChild(header2);
 row.appendChild(header3);
 
 tblBody.appendChild(row);
-// }
 
 // put the <tbody> in the <table>
 tbl.appendChild(tblBody);
@@ -101,24 +100,14 @@ submitBtn.addEventListener("click", function () {
   //   const fifthColumn = document.getElementById("fifthColumn");
   //   fifthColumn.appendChild(delBtn);
 
-  // clears input field
-
-  // function generateTable() {
-  // creates a <table> element and a <tbody> element
-  // const tbl = document.createElement("table");
-  // const tblBody = document.createElement("tbody");
-
-  // creating all cells
-  // for (let i = 0; i < 2; i++) {
+  
   // creates a table row
   const row1 = document.createElement("tr");
-  // row1.id = "row1"
 
   const delBtn = document.createElement("button");
   delBtn.setAttribute("id", "delete-btn");
   delBtn.innerText = "X";
 
-  //   for (let j = 0; j < 2; j++) {
   // Create a <td> element and a text node, make the text
   // node the contents of the <td>, and put the <td> at
   // the end of the table row
@@ -139,7 +128,6 @@ submitBtn.addEventListener("click", function () {
   cell3.appendChild(cellText3);
   cell4.appendChild(delBtn);
 
-  //what does row1 represent? One row...
   row1.appendChild(cell);
   row1.appendChild(cell1);
   row1.appendChild(cell2);
@@ -173,7 +161,6 @@ submitBtn.addEventListener("click", function () {
     }
   });
 
-  //   }
 
   // add the row to the end of the table body
   // tblBody.appendChild(row);
@@ -189,6 +176,7 @@ submitBtn.addEventListener("click", function () {
   // tbl.setAttribute("align", "center");
   // }
 
+  // clears input fields
   date.value = "";
   expenseDescription.value = "";
   amount.value = "";
