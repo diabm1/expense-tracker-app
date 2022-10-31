@@ -8,9 +8,9 @@ let purchaseLocation = document.getElementById("inputForLocationOfPurchases");
 
 //Buttons
 const submitBtn = document.getElementById("submitBtn");
-const delBtn = document.createElement("button");
-delBtn.setAttribute("id", "delete-btn");
-delBtn.innerText = "X";
+// const delBtn = document.createElement("button");
+// delBtn.setAttribute("id", "delete-btn");
+// delBtn.innerText = "X";
 
 const tbl = document.createElement("table");
 const tblBody = document.createElement("tbody");
@@ -112,7 +112,11 @@ submitBtn.addEventListener("click", function () {
   // for (let i = 0; i < 2; i++) {
   // creates a table row
   const row1 = document.createElement("tr");
-  row1.id = "row1"
+  // row1.id = "row1"
+
+  const delBtn = document.createElement("button");
+  delBtn.setAttribute("id", "delete-btn");
+  delBtn.innerText = "X";
 
   //   for (let j = 0; j < 2; j++) {
   // Create a <td> element and a text node, make the text
@@ -135,11 +139,14 @@ submitBtn.addEventListener("click", function () {
   cell3.appendChild(cellText3);
   cell4.appendChild(delBtn);
 
+  //what does row1 represent? One row...
   row1.appendChild(cell);
   row1.appendChild(cell1);
   row1.appendChild(cell2);
   row1.appendChild(cell3);
   row1.appendChild(cell4);
+
+  
 
   //delete button
   let btnClicked = false;
@@ -154,7 +161,7 @@ submitBtn.addEventListener("click", function () {
       // thirdColumn.style.display = "inline";
       // fourthColumn.style.display = "inline";
       // fifthColumn.style.display = "inline";
-      row1.style.display = "inline"
+      row1.style.display = "inline";
     } else if (btnClicked === true) {
       //display nothing
       // firstColumn.style.display = "none";
@@ -162,7 +169,7 @@ submitBtn.addEventListener("click", function () {
       // thirdColumn.style.display = "none";
       // fourthColumn.style.display = "none";
       // fifthColumn.style.display = "none";
-      row1.style.display = "none"
+      row1.style.display = "none";
     }
   });
 
